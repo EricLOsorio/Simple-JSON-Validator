@@ -25,7 +25,7 @@ function purgeSpaces(string){
 
   button.addEventListener('click',function(){
   	var originalString=inputString.value;
-    var testString=purgeSpaces(originalString); console.log(testString);
+    var testString=purgeSpaces(originalString);
     var pattern=/^\{(((\"([a-zA-Z_]+_*\d*[a-zA-Z]*)+\"\:)+)((\d*)|(true|false)|((\"([^\"]*)\"))|((\[((\"[^\"]*\")|\d*|(true|false)))(((,\"[^\"]*\")|(,\d+)|,(true|false)))*\])|(\{\}))?((,(\"([a-zA-Z_]+_*\d*[a-zA-Z]*)+\"\:){1}((\d+)|(true|false)+|((\"([^\"]*)\"))+|((\[((\"[^\"]*\")|\d*|(true|false)))(((,\"[^\"]*\")|(,\d+)|,(true|false)))*\])|(\{\}))+)*)?)?\}/g;
     if(pattern.test(testString)){
       output.innerHTML=`The input JSON string is valid JSON \r\r\r ${testString}`
