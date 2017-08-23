@@ -1,0 +1,1 @@
+window.onload=function(){var e=document.getElementById("button"),t=document.getElementById("inputString"),n=document.getElementById("output"),o=document.getElementById("textOutput");e.addEventListener("click",function(){var e=t.value,d=new Worker("worker.js");d.postMessage(e),d.onmessage=function(e){n.innerHTML=e.data},o.checked=!0})};
